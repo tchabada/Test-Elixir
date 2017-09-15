@@ -1,6 +1,8 @@
 # IntelliJ Idea
 .idea/
 
+# Ignore secret .env.sh
+#
 # App artifacts
 /_build
 /db
