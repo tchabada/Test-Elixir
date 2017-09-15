@@ -1,4 +1,8 @@
 defmodule ChaboRest do
+  @moduledoc """
+  ChaboRest - Core Module
+  """
+
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -27,17 +31,5 @@ defmodule ChaboRest do
   def config_change(changed, _new, removed) do
     ChaboRest.Endpoint.config_change(changed, removed)
     :ok
-  end
-
-  def twitter_test do
-    ExTwitter.search("elixir-lang", [count: 5])
-      |> Enum.map(fn(tweet) -> tweet.text end)
-      |> Enum.map(fn(text) -> ChaboRest.Repo.insert(%ChaboRest.Tweet{msg: text}) end)
-  end
-
-  def twitter_stream(selector \\ "apple") do
-    stream = ExTwitter.stream_filter(track: selector)
-      |> Stream.map(fn(x) -> x.text end)
-      |> Enum.map(fn(text) -> ChaboRest.Repo.insert(%ChaboRest.Tweet{msg: text}) end)
   end
 end

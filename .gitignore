@@ -2,7 +2,8 @@
 .idea/
 
 # Ignore secret .env.sh
-#
+.env.sh
+
 # App artifacts
 /_build
 /db
