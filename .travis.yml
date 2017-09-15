@@ -37,11 +37,9 @@ before_script:
   - rustup component add rust-src
   - export RUST_SRC_PATH=`rustc --print sysroot`/lib/rustlib/src/rust/src
   - export RUST_BACKTRACE=1
-  - cargo build
   - mix deps.get --only test
 
 script:
-  - mix ecto.create
   - mix ecto.create
   - mix ecto.migrate
   - mix test

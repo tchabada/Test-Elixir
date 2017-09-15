@@ -1,5 +1,11 @@
 # ChaboRest
 
+## Status
+
+[![License](https://img.shields.io/github/license/tchabada/Test-Elixir.svg)](https://github.com/tchabada/Test-Elixir/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/tchabada/Test-Elixir.svg?branch=master)](https://travis-ci.org/tchabada/Test-Elixir)
+
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
