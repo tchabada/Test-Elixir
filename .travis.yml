@@ -26,7 +26,8 @@ addons:
      - gdbserver
 
 env:
-  - POSTGRES_PASSWORD="" MIX_ENV=test
+  - POSTGRES_PASSWORD=""
+  - MIX_ENV=test
 
 before_script:
   - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
@@ -43,3 +44,5 @@ script:
   - mix ecto.create
   - mix ecto.migrate
   - mix test
+  - mix credo
+
